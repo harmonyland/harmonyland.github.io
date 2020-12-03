@@ -1,15 +1,15 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
+heroImage: https://cdn.discordapp.com/emojis/783321055456002110.png?v=1
 tagline: An easy to use, advanced Discord API library, for Deno.
-actionText: Quick Start →
+actionText: Get started →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
-footer: Made by DjDeveloperr with ❤️
+- title: Easy to use
+  details: With Harmony, you can setup a bot within seconds.
+- title: Customizable
+  details: Harmony offers a lot of customizations, including Custom Caching.
+- title: Commmands
+  details: Built-in, feature-rich commands framework.
+footer: Made by Harmony Org with ❤️
 ---
