@@ -1,0 +1,19 @@
+{
+  "name": "harmony-guide",
+  "version": "0.0.1",
+  "description": "An easy to use, advanced Discord API library, for Deno.",
+  "main": "index.js",
+  "authors": {
+    "name": "DjDeveloperr",
+    "email": "djdeveloperr@gmail.com"
+  },
+  "repository": "guide/harmony-guide",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
