@@ -1,2 +1,0 @@
-- name: Vuepress to GitHub Pages
-  uses: testthedocs/github-pages-deploy-action@0.0.3
