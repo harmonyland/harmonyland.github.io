@@ -27,6 +27,6 @@ And since there's no `package.json` in Deno, you might find it better to have a 
 export * from 'https://deno.land/x/harmony@v0.9.1'
 ```
 
-and you can just import Harmony lib exports from local deps.ts! It's a good way to maintain the third party modules you're using.
+and you can just import Harmony lib exports from local `deps.ts`! It's a good way to maintain the third party modules you're using.
 
 ## Project Structure
