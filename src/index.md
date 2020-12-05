@@ -5,11 +5,11 @@ tagline: An easy to use, advanced Discord API library, for Deno.
 actionText: Get started →
 actionLink: /guide/
 features:
-- title: Easy to use
+- title: Easy to use.
   details: With Harmony, you can setup a bot within seconds.
-- title: Customizable
+- title: Customizable.
   details: Harmony offers a lot of customizations, including Custom Caching.
-- title: Commmands
+- title: Commmands.
   details: Built-in, feature-rich commands framework.
-footer: Made by Harmony Org with ❤️
+footer: Made by with ❤️ Harmony Org
 ---
