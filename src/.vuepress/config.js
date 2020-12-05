@@ -58,8 +58,6 @@ module.exports = {
 
   theme: 'default-prefers-color-scheme',
 
-  base: '/harmony-guide',
-
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
