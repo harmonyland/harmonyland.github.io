@@ -4,7 +4,7 @@
 
 This is official guide for [Harmony](https://github.com/harmony-org/harmony) Discord API library.
 
-Live version automatically deployed to GitHub Pages can be seen [here](https://harmony-org.github.com).
+Live version automatically deployed to GitHub Pages can be seen [here](https://harmony-org.github.io).
 
 ## Contributing
 
