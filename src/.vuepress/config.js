@@ -27,11 +27,11 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
+    repo: 'https://github.com/harmony-org/harmony-org.github.io',
+    editLinks: true,
+    docsDir: 'src',
+    editLinkText: 'Edit this page',
+    lastUpdated: true,
     nav: [
       {
         text: 'Guide',
