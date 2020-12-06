@@ -6,7 +6,7 @@ If you're reading this, you probably want to create Discord bots! Who doesn't ag
 
 Here's a list of [libraries for Discord API](https://discord.com/developers/docs/topics/community-resources#libraries-discord-libraries). If you couldn't find one for you, let's continue! JavaScript (or TypeScript) aren't hard to learn.
 
-What exactly is Harmony? It's an easy to use, and advanced Discord API Library, for Deno. It's designed to be easy to use, as well as to offer everything an advanced developer may need. If you don't know about [Deno](https://deno.land) yet, in a nutshell it's a secure JavaScript/TypeScript runtime made in Rust. *You can call it new, or better Node.*
+What exactly is Harmony? It's an easy to use, and advanced Discord API Library, for Deno. It's designed to be easy to use, as well as to offer everything an advanced developer may need. If you don't know about [Deno](https://deno.land) yet, in a nutshell, it's a secure JavaScript/TypeScript runtime made in Rust. *You can call it new, or better Node.*
 
 In this guide, you'll learn about various concepts, but here's an overview
 - How to get a bot up and running from scratch
