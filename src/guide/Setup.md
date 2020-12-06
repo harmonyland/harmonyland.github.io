@@ -1,4 +1,4 @@
-# Setup
+# Project Setup
 
 ## Install Deno
 
@@ -29,4 +29,4 @@ export * from 'https://deno.land/x/harmony@v0.9.1'
 
 and you can just import Harmony lib exports from local `deps.ts`! It's a good way to maintain the third party modules you're using.
 
-## Project Structure
+Now you're good to go! Let's start writing a simple bot in the next section.

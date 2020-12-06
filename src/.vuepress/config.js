@@ -38,6 +38,10 @@ module.exports = {
         link: '/guide/',
       },
       {
+        text: 'Discord',
+        link: 'https://discord.gg/WVN2JF2FRv'
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/harmony-org/harmony'
       }
@@ -45,18 +49,25 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: 'Guide',
+          title: 'Home',
           collapsable: false,
           children: [
             '',
-            'Setup',
+            'setup'
+          ]
+        },
+        {
+          title: 'Beginner',
+          collapsable: false,
+          children: [
+            'beginner/basic_bot',
           ]
         }
       ],
     }
   },
 
-  theme: 'default-prefers-color-scheme',
+  theme: 'yuu',
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
