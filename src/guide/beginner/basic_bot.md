@@ -37,7 +37,7 @@ In case you really lost it, best way is to reset it using `Regenerate` button on
 
 ## Write Code
 
-Let's *actually* start writing code! If you still haven't done your setup, it's easy! Just head to [Setup](./Setup.md) section.
+Let's *actually* start writing code! If you still haven't done your setup, it's easy! Just head to [Setup](../setup.md) section.
 
 Assuming you have a `deps.ts` file in your project directory, go ahead and make a `mod.ts` file (`bot.ts` or any other name would work too!)
 

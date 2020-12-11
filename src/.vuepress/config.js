@@ -62,6 +62,13 @@ module.exports = {
           children: [
             'beginner/basic_bot',
           ]
+        },
+        {
+          title: 'Slash Commands',
+          collapsable: false,
+          children: [
+            'slash_commands/tag_bot'
+          ]
         }
       ],
     }
