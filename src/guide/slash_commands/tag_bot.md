@@ -123,7 +123,7 @@ Here are the rest of Slash Command objects. I've kept them in an Array so we can
 
 ```ts
 // Now you can remove these two imports in bot.ts!
-import { SlashCommandPartial, SlashCommandOptionType } from "./depts"
+import { SlashCommandPartial, SlashCommandOptionType } from "./dep.ts"
 
 export const commands: SlashCommandPartial[] = [
     {
