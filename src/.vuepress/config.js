@@ -40,10 +40,6 @@ module.exports = {
       {
         text: 'Discord',
         link: 'https://discord.gg/WVN2JF2FRv'
-      },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/harmony-org/harmony'
       }
     ],
     sidebar: {
