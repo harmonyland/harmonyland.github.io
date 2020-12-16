@@ -3,7 +3,7 @@
 ## Introduction
 
 ::: warning
-This update is not yet deployed to main branch or released. It's on a Pull Request at the moment.
+This update is not yet released on stable. It's on `main` branch.
 :::
 
 Let's make some cool Slash Commands! What exactly are Slash Commands? These are just commands - but visible on Discord Client when you start typing `/` and also provide auto-completion and many other features!
@@ -16,8 +16,7 @@ Ahead from here, I assume that you already have made an Application and Bot User
 Slash Commands actually don't require making a bot user! But with a bot user you get a lot more functionality than just commands. For the sake of simplicity, we're using bot user way, that uses Gateway for receiving interactions.
 :::
 
-Now go to OAuth2 page, and select `Bot` scope, preferably leaving permissions blank because they're not needed.
-Copy the link, and add `%20applications.commands` at the end of it. Because, at the moment, when I'm writing this, Slash Commands update it not completely deployed yet. So the OAuth2 link generator will ask you to add a Redirect URI which is not needed for the `applications.commands` scope.
+Now go to OAuth2 page, and select `bot` and `applications.commands` scopes, then copy invite. 
 
 If you are confused with this, here's a template link: `https://discord.com/api/oauth2/authorize?client_id=YOUR_APPLICATION_ID&permissions=0&scope=bot%20applications.commands` and make sure to replace `YOUR_APPLICATION_ID` with yours!
 
@@ -65,11 +64,11 @@ Don't get confused with the imports! I'll explain what are these.
 - SlashCommandPartial is an interface which is basically a "map" or "structure" of our Command objects.
 - Interaction is a class of which object is passed to our Slash Commands. We use this to respond to Slash Commands!
 - InteractionResponseType is an enum, i.e. enumerated value. It specifies which type of response we are sending. Below is the list.
-  - PONG, it means nothing here, ignore it.
-  - ACKNOWLEDGE means bot has recognized the command and silently execute i.e. with no result.
-  - CHANNEL_MESSAGE means bot will just Message in response to the Slash Command.
-  - CHANNEL_MESSAGE_WITH_SOURCE means bot will do above thing AND a message showing `<User> used /<Command> with <Bot>`.
-  - ACK_WITH_SOURCE means bot will not respond and silently execute, but send the above mentioned "User used Command" message. 
+  - `PONG`, it means nothing here, ignore it.
+  - `ACKNOWLEDGE` means bot has recognized the command and silently execute i.e. with no result.
+  - `CHANNEL_MESSAGE means` bot will just Message in response to the Slash Command.
+  - `CHANNEL_MESSAGE_WITH_SOURCE` means bot will do above thing AND a message showing `<User> used /<Command> with <Bot>`.
+  - `ACK_WITH_SOURCE` means bot will not respond and silently execute, but send the above mentioned "User used Command" message. 
   - ... and you can access these in `InteractionResponseType` such as `InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE`.
 - SlashCommandOptionType is also an enumerated value. It allows us to specify what type of option we need! There are types like String, Number, User, Role, etc. which are already parsed for us when someone uses Slash Commands.
 - `event` is a decorator. It adds on an easy way to listen for events.
@@ -99,6 +98,7 @@ A Slash Command has three properties:
   - `description`: Description of the option
   - `required`: Whether the option is required or not
   - `type`: Type of the option. Here somes the `SlashCommandOptionType` enum into use.
+  - `options`: (Optional) for nested sub-commands or sub command groups
 
 For example, we want a command named `tag`, which will send a tag's contents. It will accept an option `name` which is name of the Tag to send. Structure for it would look like this,
 
@@ -370,7 +370,7 @@ Let's start adding code to our Slash Command handlers.
 - `tag`
 ```ts
 // Get the tag name from command arguments (options)
-const name = i.data.options.find((e) => e.name == "name")?.value as string;
+const name = i.options.find((e) => e.name == "name")?.value as string;
 // Get the tag from database
 const tag = getTag(i.guild.id, name);
 
@@ -442,8 +442,8 @@ if (tags.length >= 10)
         temp: true,
     });
 
-const name = i.data.options.find((e) => e.name == "name")?.value as string;
-const content = i.data.options.find((e) => e.name == "content")?.value as string;
+const name = i.options.find((e) => e.name == "name")?.value as string;
+const content = i.options.find((e) => e.name == "content")?.value as string;
 
 if (content.length > 2000)
     return i.respond({
@@ -469,7 +469,7 @@ if (added == null) {
 ```
 - `deletetag`
 ```ts
-const name = i.data.options.find((e) => e.name == "name")?.value as string;
+const name = i.options.find((e) => e.name == "name")?.value as string;
 const tag = getTag(i.guild.id, name);
 
 if (!tag)
@@ -496,8 +496,8 @@ i.respond({
 ```
 - `updatetag`
 ```ts
-const name = i.data.options.find((e) => e.name == "name")?.value as string;
-const content = i.data.options.find((e) => e.name == "content")?.value as string;
+const name = i.options.find((e) => e.name == "name")?.value as string;
+const content = i.options.find((e) => e.name == "content")?.value as string;
 
 if (content.length > 2000)
     return i.respond({
