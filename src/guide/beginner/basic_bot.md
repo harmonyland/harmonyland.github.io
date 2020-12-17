@@ -64,7 +64,7 @@ It's worth noticing that we're putting `client.connect` at end because we're add
 ::: tip
 Haven't code deps.ts till now? here's the code (again)
 ```ts
-export * from 'https://deno.land/x/harmony@v0.9.1'
+export * from 'https://deno.land/x/harmony@v0.9.2'
 ```
 :::
 

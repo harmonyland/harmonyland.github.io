@@ -25,7 +25,7 @@ In this guide, we'll use SQLite database using [this](https://deno.land/x/sqlite
 Our `deps.ts` will have these two modules:
 ```ts
 export { DB } from "https://deno.land/x/sqlite/mod.ts"
-export * from "https://raw.githubusercontent.com/DjDeveloperr/harmony/slash/mod.ts"
+export * from "https://deno.land/x/harmony/mod.ts"
 ```
 
 Let's create two more files - `bot.ts` and `db.ts`! I already mentioned what these two different modules are going to do above.
