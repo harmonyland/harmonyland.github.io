@@ -2,10 +2,6 @@
 
 ## Introduction
 
-::: warning
-This update is not yet released on stable. It's on `main` branch.
-:::
-
 Let's make some cool Slash Commands! What exactly are Slash Commands? These are just commands - but visible on Discord Client when you start typing `/` and also provide auto-completion and many other features!
 
 ## Getting started
