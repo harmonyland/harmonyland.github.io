@@ -12,4 +12,4 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BUILD_DIR: src/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run-script build && echo harmony.mod.land > src/.vuepress/dist
+        BUILD_SCRIPT: npm install && npm run-script build && echo harmony.mod.land > src/.vuepress/dist/CNAME
