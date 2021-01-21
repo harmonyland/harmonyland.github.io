@@ -24,9 +24,11 @@ If you come from a [Node.js](https://nodejs.org) background, you're probably use
 And since there's no `package.json` in Deno, you might find it better to have a `deps.ts` file to export your third party modules! Here's an example how to export Harmony from there,
 
 ```ts
-export * from 'https://deno.land/x/harmony@v0.9.1'
+export * from 'https://deno.land/x/harmony/mod.ts'
 ```
 
 and you can just import Harmony lib exports from local `deps.ts`! It's a good way to maintain the third party modules you're using.
 
 Now you're good to go! Let's start writing a simple bot in the next section.
+
+Note that the import above has no version and a warning will be thrown the first time you import it. You can add a version such as `https://deno.land/x/harmony@v0.9.3/mod.ts`.
