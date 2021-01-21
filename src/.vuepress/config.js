@@ -27,7 +27,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'https://github.com/harmony-org/harmony-org.github.io',
+    repo: 'https://github.com/harmonyland/harmonyland.github.io',
     editLinks: true,
     docsDir: 'src',
     editLinkText: 'Edit this page',
