@@ -4,12 +4,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-
-    - name: Build and Deploy
-      uses: testthedocs/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BUILD_DIR: src/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run-script build && echo harmony.mod.land > src/.vuepress/dist/CNAME
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+    - name: Build
+      run: |
+        yarn install
+        yarn build
+    - name: Deploy documentation
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/src/.vuepress/dist
+        commit_message: ${{ github.event.head_commit.message }}
+        cname: harmony.mod.land
+        keep_files: true
+        enable_jekyll: false
