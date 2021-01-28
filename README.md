@@ -16,4 +16,4 @@ However, make sure to read [Contributing](CONTRIBUTING.md) guide!
 
 This guide is licensed under [MIT](LICENSE).
 
-Copyright ©️ Harmony Org
+Copyright ©️ Harmonyland
