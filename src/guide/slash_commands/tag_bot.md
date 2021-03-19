@@ -216,7 +216,7 @@ class TagBot extends Client {
             // I recommend making it for only one guild for now because Global Slash Commands can take max 1 hour to come live.
             this.slash.commands.create(command, 'Your Server/Guild ID')
               .then((cmd) => console.log(`Created Slash Command ${cmd.name}!`))
-              .catch(() => console.log(`Failed to create ${cmd.name} command!`));
+              .catch(() => console.log(`Failed to create ${command.name} command!`));
         })
     }
 }
