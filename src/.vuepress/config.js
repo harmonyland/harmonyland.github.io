@@ -30,6 +30,7 @@ module.exports = {
     repo: 'https://github.com/harmonyland/harmonyland.github.io',
     editLinks: true,
     docsDir: 'src',
+    docsBranch: 'main',
     editLinkText: 'Edit this page',
     lastUpdated: true,
     nav: [
