@@ -39,6 +39,10 @@ module.exports = {
         link: '/guide/',
       },
       {
+        text: 'Documentation',
+        link: 'https://doc.deno.land/https/deno.land/x/harmony/mod.ts',
+      },
+      {
         text: 'Discord',
         link: 'https://discord.gg/WVN2JF2FRv'
       }
