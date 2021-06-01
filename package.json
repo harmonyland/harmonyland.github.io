@@ -4,8 +4,7 @@
   "description": "An easy to use, advanced Discord API library, for Deno.",
   "main": "index.js",
   "authors": {
-    "name": "DjDeveloperr",
-    "email": "djdeveloperr@gmail.com"
+    "name": "Harmony org"
   },
   "repository": "guide/harmony-guide",
   "scripts": {
