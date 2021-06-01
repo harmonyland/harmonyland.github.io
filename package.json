@@ -18,7 +18,6 @@
     "vuepress-theme-yuu": "^2.3.0"
   },
   "dependencies": {
-    "vuepress-theme-default-prefers-color-scheme": "^2.0.0",
-    "vuepress-theme-yuu": "^2.3.0"
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }
 }
