@@ -19,7 +19,7 @@ In this guide, you'll learn about various concepts, but here's an overview
 
 It's possible that you want to get started with bot development, but don't know any programming language. However, we recommend you to learn basics else you'll be tackling with problems with are actually so small! It doesn't take much time, here are some good resources to get started with JavaScript...
 
-- [Modern JavaScript tutorial](https://javascript.info/)
+- [모던 JavaScript ](https://javascript.info/)
 - [MDN's JavaScript guide and Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [CodeCademy JavaScript course](https://www.codecademy.com/learn/learn-javascript)
 - And honestly, [Stack Overflow](https://stackoverflow.com) will be solving many problems for you
