@@ -11,5 +11,5 @@ features:
   details: Harmony offers a lot of customizations, including Custom Caching.
 - title: Commmands.
   details: Built-in, feature-rich commands framework.
-footer: Made by with ❤️ Harmony Org
+footer: Made with ❤️ by Harmony Devs
 ---
