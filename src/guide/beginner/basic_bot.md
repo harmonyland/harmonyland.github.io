@@ -28,7 +28,7 @@ On the `Bot` page itself, there is a `Copy Token` button - go ahead and click on
 ![Copy Token](https://cdn.discordapp.com/attachments/454477785390514187/785091642482360360/unknown.png)
 
 ::: warning
-Token should **NEVER** be shared with **ANYONE**! Token gives **complete**, yes complete access over bot and can destroy it *badly*.
+Token should **NEVER** be shared with **ANYONE**! Token gives **complete**, anyone complete access over bot and can destroy it *badly*.
 :::
 
 ::: tip
@@ -42,29 +42,31 @@ Let's *actually* start writing code! If you still haven't done your setup, it's 
 Assuming you have a `deps.ts` file in your project directory, go ahead and make a `mod.ts` file (`bot.ts` or any other name would work too!)
 
 ```ts
-// Importing Client and Intents class from Harmony
-import { Client, Intents } from './deps.ts'
+import { Client } from './deps.ts'
 
-// Creating client (or bot!)
 const client = new Client()
 
-// Listen for when bot is connected to Discord (i.e. logged in)
 client.on('ready', () => {
-    console.log('Ready!')
+  console.log(`Ready! User: ${client.user?.tag}`)
 })
 
-// Proceed with connecting to Discord (login)
-client.connect('super secret token comes here', Intents.None)
+client.connect('super secret token comes here')
 ```
 
-Pretty simple! Try running `deno run --allow-net mod.ts` (replace mod.ts with your file name if not same). Aaaand you'll see your bot online! That's pretty cool - but uh bot does nothing! Let's add a simple ping-pong command.
+Let's check what we just wrote:
+- We import `Client` from `deps.ts` file,
+- We create new instance of discord client,
+- We add listener for `ready` event which executes when Bot connects to Discord server,
+- We finally connect to Discord using our super secret token
 
-It's worth noticing that we're putting `client.connect` at end because we're adding listeners to our client, to make sure bot doesn't login before listening to events. Weird case though!
+Pretty simple! Try running `deno run --allow-net mod.ts` (replace mod.ts with your file name if not same). Aaaand you'll see your bot online! That's pretty cool - but uh bot does nothing! Except telling when it connected to Discord, let's add a simple ping-pong command.
+
+Did you noticed how we connected after all the things we have done? We're putting `client.connect` method at the end just to make sure bot doesn't login before listening to events. Weird case though!
 
 ::: tip
-Haven't code deps.ts till now? here's the code (again)
+Stil don't have `deps.ts` file? Here's the code again
 ```ts
-export * from 'https://deno.land/x/harmony@v0.9.3/mod.ts'
+export * from 'https://deno.land/x/harmony@v2.1.3/mod.ts'
 ```
 :::
 
@@ -73,23 +75,25 @@ export * from 'https://deno.land/x/harmony@v0.9.3/mod.ts'
 Let's proceed with adding a simple command, ping! For that, your bot will listen to a event called `messageCreate` - which is fired whenever a message is created (i.e. sent).
 
 ```ts
-// Importing required classes from Harmony
-import { Client, Intents, Message } from './deps.ts'
+// Add new imports to reflect changes
+import { Client, GatewayIntents, Message } from './deps.ts'
 
 // ... rest of the code
 
 // Listen for an event which is fired when a Message is sent
 client.on('messageCreate', (message: Message) => {
+
     // All the message data is inside `Message` here.
-    // For now, we just need the text of the Message, that is called `content`.
-    // Content of Message can be accessed using `<Message>.content`; here message.content
+    // For now, we just need the text of the Message, which is called `content`.
+    // Content of Message can be accessed using `<Message>.content`; in this case: message.content
     // Let's compare that to a string "!ping", and reply back with "Pong!"
+
     if (message.content == '!ping') {
         message.reply('Pong!')
     }
 })
 
-client.connect('super secret token comes here', Intents.None)
+client.connect('super secret token comes here', GatewayIntents.None)
 ```
 
 Yes! That's it! We got our own ping command. Now try running the bot and send `!ping`!
@@ -97,7 +101,7 @@ Yes! That's it! We got our own ping command. Now try running the bot and send `!
 Got stuck? This is our resulting code,
 
 ```ts
-import { Client, Intents } from './deps.ts'
+import { Client, GatewayIntents } from './deps.ts'
 
 const client = new Client()
 
@@ -112,7 +116,7 @@ client.on('messageCreate', (message: Message) => {
 })
 
 // Proceed with connecting to Discord (login)
-client.connect('super secret token comes here', Intents.None)
+client.connect('super secret token comes here', GatewayIntents.None)
 ```
 
 ## Using Command Client
