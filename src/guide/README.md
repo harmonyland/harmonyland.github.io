@@ -3,14 +3,14 @@
 ![BANNER](https://camo.githubusercontent.com/7d1d4666f64be79ec842ddcfcaf0848c758e16da2c2e30083e5a6c61475ec994/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3738333331393033333733303536343039382f3738333339393031323534373033353137362f4861726d6f6e7942616e6e65722e706e67)
 
 ::: warning
-If you're reading this, you probably want to create some Discord realted service. And as we know that stuff is quite awesome, but just so you know this library is made with [Deno](https://deno.land) and TypeScript (which is basically a JavaScript with types) in mind. Don't run away yet, we will help you get acquainted with both Deno and TS (TypeScript).
+If you're reading this, you probably want to create some Discord integration. And as we know that stuff is quite awesome, but just so you know this library is made with [Deno](https://deno.land) and TypeScript (which is a JavaScript with types) in mind. Don't run away yet, we will help you get acquainted with both Deno and TS (TypeScript).
 
 If you ended up here by mistake or just were looking for some other library, this [portal](https://discord.com/developers/docs/topics/community-resources#libraries-discord-libraries) can help you.
 :::
 
 ## But what exactly is Harmony?
 
-What exactly is Harmony? It's an easy to use, and advanced Discord API Library, for Deno. It's designed to be easy to use, as well as to offer everything an advanced developer may need. If you don't know about [Deno](https://deno.land) yet, in a nutshell, it's a secure JavaScript/TypeScript runtime made in Rust. Yes, that's all you need to know about Deno at least for now.
+What exactly is Harmony? It's easy to use, and advanced Discord API Library, for Deno. It's designed to be easy to use, as well as to offer everything an advanced developer may need. If you don't know about [Deno](https://deno.land) yet, in a nutshell, it's a secure JavaScript/TypeScript runtime made in Rust. Yes, that's all you need to know about Deno at least for now.
 
 In this guide, you'll learn about various concepts, but here's an overview
 - How to get your bot up and running
@@ -20,7 +20,7 @@ In this guide, you'll learn about various concepts, but here's an overview
 
 ## Before you begin...
 
-It's possible that you want to get started with bot development, but don't know any neither JavaScript or TypeScript. However, we recommend you to learn basics or else you'll be tackling with problems that are actually so small and are just begineers mistakes! It doesn't take much time to learn these, so to help you get a headstart we give you a list of resources to learn both languagers.
+You may want to get started with bot development, but don't know any neither JavaScript nor TypeScript. However, we recommend you to learn basics, or else you'll be tackling problems that are so small and are just beginners mistakes! It doesn't take much time to learn these, so to help you get a headstart we give you a list of resources to learn both languages.
 
 Let's start with JavaScript resources:
 
@@ -29,7 +29,7 @@ Let's start with JavaScript resources:
 - [CodeCademy JavaScript course](https://www.codecademy.com/learn/learn-javascript)
 - And honestly, [Stack Overflow](https://stackoverflow.com) will be solving many problems for you
 
-However, it's worth considering that Harmony is made using [TypeScript](https://www.typescriptlang.org/), which is a subset of JavaScript, but strongly-typed, and we are also using **TypeScript** throughout the guide for code examples. It helps you write more concise, less error prone code, and also adds on some new features! At the end, it compiles (transpiles!) to normal JavaScript. We recommend using TypeScript for its great features and Deno's built-in TypeScript!
+However, it's worth considering that Harmony is made using [TypeScript](https://www.typescriptlang.org/), which is a subset of JavaScript, but strongly-typed, and we are also using **TypeScript** throughout the guide for code examples. It helps you write more concise, less error-prone code, and also adds on some new features! In the end, it compiles (transpiles!) to normal JavaScript. We recommend using TypeScript for its great features and Deno's built-in TypeScript!
 
 Here are some resources for TypeScript:
 
@@ -37,4 +37,4 @@ Here are some resources for TypeScript:
 - [TypeScript's Docs for JS Programmers](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 - [Educative's TypeScript tutorial](https://www.educative.io/blog/typescript-tutorial)
 
-If you have never used [Deno](https://deno.land) before, you might want to consider reading [Deno Manual](https://deno.land/manual) and a gentle introduction to the runtime and it's features.
+If you have never used [Deno](https://deno.land) before, you might want to consider reading [Deno Manual](https://deno.land/manual) and a gentle introduction to the runtime and its features.

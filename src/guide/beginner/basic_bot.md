@@ -2,37 +2,37 @@
 
 ## Create Application
 
-First, you need to create a bot in Discord's Developer Applications page. Head to [Applications Page](https://discord.com/developers/applications) and hit `New Application` button. A modal will appear asking you for name, enter the bot name you want and hit `Create`!
+First, you need to create a bot on Discord's Developer Applications page. Head to [Applications Page](https://discord.com/developers/applications) and hit the `New Application` button. A modal will appear asking you for name, enter the bot name you want, and hit `Create`!
 
 ![Create App Modal](https://cdn.discordapp.com/attachments/454477785390514187/785084613122719764/unknown.png)
 
-Navigate to `Bot` tab on left-pane, then click on `Add Bot`. It will ask you for confirmation, just click on `Yes, do it!`
+Navigate to the `Bot` tab on the left-pane, then click on `Add Bot`. It will ask you for confirmation, just click on `Yes, do it!`
 
 ![Add Bot Modal](https://cdn.discordapp.com/attachments/454477785390514187/785085429547925564/unknown.png)
 
 Aaand your bot now has a life! Yes, a life! It has successfully become a Discord User.
-Now you can go ahead and invite the bot to your server. Now navigate to `OAuth2` tab and scroll down a bit; then select `bot` scope. And optionally, below there you can select permissions to give to bot!
+Now you can go ahead and invite the bot to your server. Now navigate to `OAuth2` tab and scroll down a bit; then select `bot` scope. And optionally, below there you can select permissions to give to the bot!
 
 ![OAuth2 Modal](https://cdn.discordapp.com/attachments/454477785390514187/785087861115453470/unknown.png)
 
-Copy the link from there and paste in a new tab, select server and `Authorize`! Bot will be in your own server!
+Copy the link from there and paste it into a new tab, select server, and `Authorize`! The bot will be on your server!
 
 Uh oh- bot is offline!? Don't worry! We'll wake up this bot!
 
 ## Get Bot's Token
 
-What's a token? It acts like a **password** for bots to *login*! Never share this to anyone! **Anyone**!
+What's a token? It acts like a **password** for bots to *login*! Never share this with anyone! **Anyone**!
 
 On the `Bot` page itself, there is a `Copy Token` button - go ahead and click on it! Token will be on your clipboard. Alternatively, you can `Click to Reveal Token`.
 
 ![Copy Token](https://cdn.discordapp.com/attachments/454477785390514187/785091642482360360/unknown.png)
 
 ::: warning
-Token should **NEVER** be shared with **ANYONE**! Token gives **complete**, anyone complete access over bot and can destroy it *badly*.
+Token should **NEVER** be shared with **ANYONE**! Token gives **complete**, anyone has complete access over bot and can destroy it *badly*.
 :::
 
 ::: tip
-In case you really lost it, best way is to reset it using `Regenerate` button on the same page, this will invalidate any previous token.
+In case you lost it, the best way is to reset it using the `Regenerate` button on the same page, this will invalidate any previous token.
 :::
 
 ## Write Code
@@ -54,17 +54,17 @@ client.connect('super secret token comes here')
 ```
 
 Let's check what we just wrote:
-- We import `Client` from `deps.ts` file,
-- We create new instance of discord client,
-- We add listener for `ready` event which executes when Bot connects to Discord server,
-- We finally connect to Discord using our super secret token
+- We import `Client` from the `deps.ts` file,
+- We create a new instance of discord client,
+- We add a listener for `ready` event which executes when Bot connects to the Discord server,
+- We finally connect to Discord using our super-secret token
 
-Pretty simple! Try running `deno run --allow-net mod.ts` (replace mod.ts with your file name if not same). Aaaand you'll see your bot online! That's pretty cool - but uh bot does nothing! Except telling when it connected to Discord, let's add a simple ping-pong command.
+Pretty simple! Try running `deno run --allow-net mod.ts` (replace mod.ts with your file name if not the same). Aaaand you'll see your bot online! That's pretty cool - but uh bot does nothing! Except telling when it connected to Discord, let's add a simple ping-pong command.
 
-Did you noticed how we connected after all the things we have done? We're putting `client.connect` method at the end just to make sure bot doesn't login before listening to events. Weird case though!
+Did you notice how we connected after all the things we have done? We're putting `client.connect` method at the end just to make sure the bot doesn't log in before listening to events. The weird case though!
 
 ::: tip
-Stil don't have `deps.ts` file? Here's the code again
+Still don't have `deps.ts` file? Here's the code again
 ```ts
 export * from 'https://deno.land/x/harmony@v2.1.3/mod.ts'
 ```
@@ -72,11 +72,11 @@ export * from 'https://deno.land/x/harmony@v2.1.3/mod.ts'
 
 ## Ping-Pong!
 
-Let's proceed with adding a simple command, ping! For that, your bot will listen to a event called `messageCreate` - which is fired whenever a message is created (i.e. sent).
+Let's proceed with adding a simple command, ping! For that, your bot will listen to an event called `messageCreate` - which is fired whenever a message is created (i.e. sent).
 
 ```ts
 // Add new imports to reflect changes
-import { Client, GatewayIntents, Message } from './deps.ts'
+import { Client, Message } from './deps.ts'
 
 // ... rest of the code
 
@@ -93,15 +93,15 @@ client.on('messageCreate', (message: Message) => {
     }
 })
 
-client.connect('super secret token comes here', GatewayIntents.None)
+client.connect('super secret token comes here')
 ```
 
-Yes! That's it! We got our own ping command. Now try running the bot and send `!ping`!
+Yes! That's it! We got our ping command. Now try running the bot and send `!ping`!
 
 Got stuck? This is our resulting code,
 
 ```ts
-import { Client, GatewayIntents } from './deps.ts'
+import { Client } from './deps.ts'
 
 const client = new Client()
 
@@ -116,7 +116,7 @@ client.on('messageCreate', (message: Message) => {
 })
 
 // Proceed with connecting to Discord (login)
-client.connect('super secret token comes here', GatewayIntents.None)
+client.connect('super secret token comes here')
 ```
 
 ## Using Command Client
@@ -126,7 +126,7 @@ But that's quite not how Commands actually work! With Harmony, you can create a 
 Let's look into making same command - but with Command Client!
 
 ```ts
-import { CommandClient, Command, Intents, CommandContext } from './deps.ts'
+import { CommandClient, Command, CommandContext } from './deps.ts'
 
 // Initialize our Command Client with prefix "!".
 // Fact, you can put multiple prefixes here using array!
@@ -151,7 +151,7 @@ class PingCommand extends Command {
 client.commands.add(PingCommand)
 
 // Connect the client to Discord
-client.connect('token comes here', Intents.None)
+client.connect('token comes here')
 ```
 
 This looks cleaner! Moreover, there are many more options to customize commands, such as limiting command to certain users, channels, guilds, or making Command guild only or DM only! A lot more!
