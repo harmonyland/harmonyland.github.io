@@ -38,6 +38,7 @@ We'll start off with the bot module. What do we need now? A basic bot structure!
 // bot.ts
 import { 
     Client, 
+    Intents, 
     slash, 
     event, 
     SlashCommandPartial, 
