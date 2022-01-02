@@ -4,8 +4,7 @@
   "description": "An easy to use, advanced Discord API library, for Deno.",
   "main": "index.js",
   "authors": {
-    "name": "DjDeveloperr",
-    "email": "djdeveloperr@gmail.com"
+    "name": "Harmony org"
   },
   "repository": "guide/harmony-guide",
   "scripts": {
@@ -14,11 +13,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3",
-    "vuepress-theme-yuu": "^2.3.0"
+    "vuepress": "^1.5.3"
   },
   "dependencies": {
-    "vuepress-theme-default-prefers-color-scheme": "^2.0.0",
-    "vuepress-theme-yuu": "^2.3.0"
+    "vuepress-theme-yuu": "^2.3.0",
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }
 }
