@@ -31,4 +31,4 @@ and you can just import Harmony lib exports from local `deps.ts`! It's a good wa
 
 Now you're good to go! Let's start writing a simple bot in the next section.
 
-Note that the import above has no version and a warning will be thrown the first time you import it. You can add a version such as `https://deno.land/x/harmony@v0.9.3/mod.ts`.
+Note that the import above has no version and a warning will be thrown the first time you import it. You can add a version such as `https://deno.land/x/harmony@v2.5.1/mod.ts`.
