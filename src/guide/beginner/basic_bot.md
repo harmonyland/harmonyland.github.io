@@ -97,7 +97,7 @@ Yes! That's it! We got our own ping command. Now try running the bot and send `!
 Got stuck? This is our resulting code,
 
 ```ts
-import { Client, Intents } from './deps.ts'
+import { Client, Intents, Message } from './deps.ts'
 
 const client = new Client()
 
