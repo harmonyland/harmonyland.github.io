@@ -44,8 +44,7 @@ import {
     SlashCommandPartial, 
     Interaction, 
     InteractionResponseType, 
-    SlashCommandOptionType,
-    Intents 
+    SlashCommandOptionType 
 } from "./deps.ts"
 
 class TagBot extends Client {
